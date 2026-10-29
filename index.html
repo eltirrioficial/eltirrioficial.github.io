@@ -629,29 +629,86 @@
 <!-- =========================
      SORTEO TIRRIANO
 ========================== -->
+<!-- =========================
+     SORTEO TIRRIANO
+========================== -->
 <section id="sorteo" class="section">
   <div class="section-title">
     <span>09</span>
     <h2>SORTEO TIRRIANO</h2>
   </div>
 
-  <div class="community-card">
+  <div class="community-card sorteo-panel">
+
     <h3>LA GANG JUEGA</h3>
 
     <p>
-      Participa durante el stream oficial de EL TIRRI.
-      Escribe <strong>!tirri</strong> en el chat
-      cuando el sorteo esté abierto.
+      Configura tu sorteo y dale la oportunidad
+      a LA TIRRI GANG de convertirse en ganador.
     </p>
+
+    <div class="sorteo-config">
+      <label for="sorteo-palabra">PALABRA DE PARTICIPACIÓN</label>
+      <input
+        id="sorteo-palabra"
+        type="text"
+        value="!tirri"
+        maxlength="30"
+        placeholder="Ej: !tirri"
+      >
+
+      <label for="sorteo-cantidad">CANTIDAD DE GANADORES</label>
+      <input
+        id="sorteo-cantidad"
+        type="number"
+        value="3"
+        min="1"
+        max="100"
+      >
+    </div>
 
     <div id="sorteo-estado">
       <span class="status-dot"></span>
-      SORTEO PRÓXIMAMENTE
+      SORTEO CERRADO
     </div>
 
     <div id="sorteo-participantes">
       PARTICIPANTES: <strong>0</strong>
     </div>
+
+    <div class="sorteo-botones">
+      <button id="sorteo-abrir" class="btn btn-primary" type="button">
+        ABRIR SORTEO
+      </button>
+
+      <button id="sorteo-cerrar" class="btn btn-secondary" type="button">
+        CERRAR SORTEO
+      </button>
+
+      <button id="sorteo-elegir" class="btn btn-primary" type="button">
+        ELEGIR GANADORES
+      </button>
+    </div>
+
+    <div id="sorteo-mensaje" role="status">
+      PREPARADO PARA EL PRÓXIMO SORTEO
+    </div>
+
+    <div id="sorteo-lista">
+      <h3>PARTICIPANTES</h3>
+      <p>Aún no hay participantes.</p>
+    </div>
+
+    <div id="sorteo-ganadores">
+      <h3>🏆 GANADORES</h3>
+      <p>Los ganadores aparecerán aquí.</p>
+    </div>
+
+    <p class="sorteo-nota">
+      PANEL EN CONFIGURACIÓN: todavía no está conectado
+      al chat real de Kick.
+    </p>
+
   </div>
 </section>
 
